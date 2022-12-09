@@ -43,11 +43,13 @@ funct2.close()
 funct3 = open("function3.c", "w")
 funct3.write(func3)
 funct3.close()
+
 #ifun.h - header file for ifunc
 func1 = func1[func1.find("void adjust_channels") : func1.find("{", func1.find("void adjust_channels"))] + ";"
 func2 = func2[func2.find("void adjust_channels") : func2.find("{", func2.find("void adjust_channels"))] + ";"
 func3 = func3[func3.find("void adjust_channels") : func3.find("{", func3.find("void adjust_channels"))] + ";\n"
 header_string = func1 + '\n\n' + func2 + '\n\n' + func3
+
 header_file = open("ifunc.h", "w")
 header_file.write(header_string)
 header_file.close()
