@@ -9,7 +9,7 @@ arguement1 = sys.argv[1]
 arguement2 = sys.argv[2]
 
 
-f = open(argument2, "r")
+f = open(arguement2, "r")
 a = f.read()
 f.close()
 a = str(a)  
