@@ -18,7 +18,7 @@ func1 = a.replace("void adjust_channels", "void adjust_channels_asimd", 1)
 
 a1 = func1.find("printf")
 a2 = func1.find(";", a1)
-func1 = func1.replace(func1[idx1:idx2], 'printf("SIMD")')
+func1 = func1.replace(func1[a1:a2], 'printf("SIMD")')
 
 func2 = a.replace("void adjust_channels", "void adjust_channels_sve", 1)
 
@@ -30,7 +30,7 @@ func3 = a.replace("void adjust_channels", "void adjust_channels_sve2", 1)
 
 a1 = func3.find("printf")
 a2 = func3.find(";", a1)
-func3 = func3.replace(func3[idx1:idx2], 'printf("SVE2\\n")')
+func3 = func3.replace(func3[a1:a2], 'printf("SVE2\\n")')
 
 # here we are opeing the file name funciton1.c and giving the file to w in it and copying the content form the func1 file and then we are closing it
 funct1 = open("function1.c", "w")
