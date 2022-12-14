@@ -16,7 +16,7 @@ a = str(a)
 
 func1 = a.replace("void adjust_channels", "void adjust_channels_asimd", 1)
 
-a1 = funct1.find("printf")
+a1 = func1.find("printf")
 a2 = func1.find(";", a1)
 func1 = func1.replace(func1[idx1:idx2], 'printf("SIMD")')
 
