@@ -9,6 +9,11 @@ arguement1 = sys.argv[1]
 arguement2 = sys.argv[2]
 
 
+f = open(argument2, "r")
+a = f.read()
+f.close()
+a = str(a)  
+
 func1 = a.replace("void adjust_channels", "void adjust_channels_asimd", 1)
 
 a1 = funct1.find("printf")
@@ -27,10 +32,6 @@ a1 = func3.find("printf")
 a2 = func3.find(";", a1)
 func3 = func3.replace(func3[idx1:idx2], 'printf("SVE2\\n")')
 
-f = open(argument2, "r")
-a = f.read()
-f.close()
-a = str(a)
 # here we are opeing the file name funciton1.c and giving the file to w in it and copying the content form the func1 file and then we are closing it
 funct1 = open("function1.c", "w")
 funct1.write(func1)
